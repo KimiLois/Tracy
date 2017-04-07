@@ -1,0 +1,148 @@
+
+/* Shadow for the body*/
+body:before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+
+
+/* Container with all of the Tracy components */
+#wholeContainer{
+    height: 750px;
+}
+
+/*Container for options like import/export, toggle heap */
+#importSection{
+    height: 10%;
+    background-color: #eff8ff;
+}
+
+/*Container for the highlighted code on the left */
+#codeSection{
+    overflow-y: scroll;
+    height: 80%;
+    background-color: #93ff96;
+}
+
+/*Lines of code in the code container*/
+#linesOfCode{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+/*Container for the trace to be constructed on the right */
+#traceSection{
+    overflow-y: scroll;
+    height: 80%;
+    background-color: #86e7b8;
+}
+
+
+/*Container for options like clicking through lines of code and
+  having the VMR timeline*/
+#optionsSection{
+    height: 10%;
+    background-color: #eff8ff;
+}
+
+#optionsContainer{
+    height: 100%;
+}
+
+
+/*Tags/classes for the section containing VMRs*/
+
+#VMRSection{
+    float: right;
+    height: 100%;
+}
+
+#VMRSequence{
+    height: 100%;
+    overflow-x: scroll;
+}
+
+#VMRButton{
+    height: 100%;
+}
+
+/*CSS for the VMR table*/
+
+.tableVMR{
+    margin-top: 3px;
+}
+
+.tableColH{
+    min-width: 50px;
+    height: 50px;
+
+    border: 4px solid rgba(31,60,175,1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+    box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+    background-color: rgba(149,218,237,1);
+}
+
+
+.tableColNH{
+    min-width: 50px;
+    height: 50px;
+
+    border: 2px solid rgba(31,60,175,1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+    -webkit-box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+    box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+    background-color: rgba(149,218,237,1);
+}
+
+
+
+/* CSS for the export form */
+.aForm{
+    width: 100px;
+    display: inline;
+}
+
+
+/* CSS for the containers in the trace section */
+.varBox{
+    width: 450px;
+    height:600px;
+    float: left;
+    
+}
+
+.arrBox{
+    width: 450px;
+    height: 600px;
+    float: right;
+}
+
+/*--------------*/
+
+/*lines of code imported/exported*/
+.highlighted {
+    border: solid red 1px;
+    border-radius: 10px;
+}
+
+
+.nonhighlighted{}
+
+#codeSection > p{
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 20px;
+}

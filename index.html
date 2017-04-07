@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Welcome to Tracy!</title>
+
+    <!-- Google Font embed-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    
+    <!--Font Awesome CDN-->
+    <script src="https://use.fontawesome.com/a3621c661f.js"></script>
+    
+    <!-- JQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--Bootstrap CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--Including CSS-->
+    <link type="text/css" rel="stylesheet" href="./../css/index_stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="./../css/menu_stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="./../css/shadow_stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="./../css/trace_stylesheet.css"/>
+    <link rel="icon" href="data:,">
+    
+  </head>
+
+
+  <body id="theBody">
+
+    <div class="container-fluid">
+
+      <!-- The main whole container of Tracy -->
+      <div id="wholeContainer" class="row-fluid">
+
+	<!-- The container for import/export options -->
+	<div id="importSection" class="col-md-12 shadows">
+	  <button type="button" id="importButton" class="btn btn-info">Import Code</button>
+	  <button type="button" id="importXML" class="btn btn-info" disabled>Import XML</button>
+
+	  <!-- The input file types that are triggered when the buttons below are clicked-->
+	  <input type="file" id="inputFile" style="display: none" />
+	  <input type="file" id="inputKey" style="display: none" />
+
+	  <!-- Form for exporting the XML file -->
+	  <form name="myform" class="aForm" id="myform" action="./../php/download.php" method="post">
+	    <button type="submit" id="exportButton" onclick="DoSubmit()" class="btn btn-info">Export</button>
+	    <input type="hidden" name="myinput" id="myinput" value="0"/>
+	  </form>
+
+	  <!-- Radio buttons for changing modes -->
+	  <div id="radioButtons">	 
+	    <input type="radio" name="mode" id="keyMode" value="0" checked="checked">Key Mode</input>
+	    <input type="radio" name="mode" id="learningMode" value="1">Learning Mode</input>
+
+	    <!-- <button type="button" id="xmlButton" class="btn btn-info pull-right">See XML</button> -->
+	  </div>
+
+	  
+	</div>
+
+	
+	<!--The container for the code portion-->
+	<div id="codeSection" class="col-md-4 shadows">
+	  <div id="linesOfCode">
+	    
+	  </div>
+	</div>
+	
+	<!--The container for creating the traces-->
+	<div id="traceSection" class="col-md-8 shadows">
+
+	</div>
+	
+	
+	<!-- The container for the VMR sequences and functions creations-->
+	<div id="optionsSection" class="col-md-12 shadows">
+
+	  <!--Buttons for creating and deleting functions-->
+	  <button type="button" id="deleteFunction" class="btn btn-info pull-right" disabled>Delete function</button>
+	  <button type="button" id="functionButton" class="btn btn-info pull-right" disabled>Create function</button>
+	  
+	  
+	  <div id="optionsContainer" class="row">
+	    
+	    <div id="VMRSection" class="col-md-8" style="height: 100%;">
+
+	      <!--The sequence for the VMRs to be appended to-->
+ 	      <div id="VMRSequence" class="col-md-10 shadows">
+		<table id="tableVMR" class="tableVMR">
+		  <tr id="tableRowVmr">
+		  </tr>
+		</table>
+	      </div>
+
+
+	      <!--Section with buttons to save and edit line numbers, and the create button-->
+	      <div id="VMRButton" class="col-md-2">
+	    	<button type="button" id="editVMR" class="btn btn-default btn-xs editButton" disabled>
+	    	  <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
+		</button>
+
+	    	<button type="button" id="saveVMR" class="btn btn-default btn-xs saveButton" disabled>
+	    	  <i class="glyphicon glyphicon-saved" aria-hidden="true"></i>
+		</button>
+		
+		<button type="button" id="buttonVMR" class="btn btn-info" disabled>CREATE</button>
+	      </div>
+	      
+	      
+	    </div>
+
+
+	  </div>
+	</div>
+
+	
+      </div>
+    </div>
+
+    <!-- The html for the right context-menu -->
+    <div id="menu">
+      <ul id="items">   
+	<li>New variable</li>  
+	<li>New array</li>
+	<li>New pointer</li>
+      </ul>
+    </div>
+    
+    <!-- The html for the modal VMR window -->
+    <div id="vmrModal">
+      <div id="modalContent" class="shadows" > 
+	<div class="row">
+	  <div class="col-sm-2"></div>
+	  <div class="col-sm-8">
+	    <span id="EnterLine" class="font">ENTER LINE NUMBER: </span>
+	    <input type="text" name="lineNum" id="lineInput" size="5"></input>
+
+	    <span class="font" id="EnterLine">What do you want to create?</span>
+
+	    <input type="radio" name="create" id="createTrace">Trace</input>
+	    <input type="radio" name="create" id="createVmr">VMR</input>
+	    	    
+	    <button type="button" id="vmrButton" class="btn btn-info btn-sm" disabled>Create</button>
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+    
+  </body>
+
+
+  <!-- JS files -->
+  <script src="./../js/files.js"></script>  
+  <script src="./../js/lines.js"></script>
+  <script src="./../js/menu.js"></script>
+  <script src="./../js/modal.js"></script>
+  <script src="./../js/sequence.js"></script>
+  <script src="./../js/newvmr.js"></script>
+  <script src="./../js/addtrace.js"></script>
+  <script src="./../js/tracebuttons.js"></script>
+  <script src="./../js/export.js"></script>
+  <script src="./../js/verification.js"></script>
+  <script src="./../js/functions.js"></script>
+  
+</html>

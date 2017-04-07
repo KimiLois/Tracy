@@ -1,0 +1,149 @@
+
+/*CSS for the main Variable/Array/Pointer containers*/
+.thePointer{
+    width: 280px;
+    height: 45px;
+ 
+
+    background: #32c982;
+    
+    border: 2px solid rgba(7,84,52,1);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    -webkit-box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+    box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+
+    margin: auto;
+    display:block;
+}
+
+.theVariable{
+    width: 300px;
+    height: 40px;
+    background-color: rgba(120,181,232,1);
+
+    border: 2px solid rgba(61,96,165,1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+    box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+
+    margin: auto;
+    display:block;
+    
+}
+
+.theArray{
+    border: solid 2px red;
+    width: 300px;
+    height: 70px;
+   
+    background: rgba(57,155,140,1);
+    border: 2px solid rgba(10,61,56,1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+    box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+
+    margin: auto;
+    display: block;
+}
+
+/*CSS for functions*/
+.aFunction{
+    overflow: hidden;
+    height: auto;
+    width: 600px;
+    margin: auto;
+
+    border: 2px solid rgba(59,186,57,1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+    background-color: rgba(36,229,104,1);
+    -webkit-box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+    box-shadow: 4px 5px 4px 0 rgba(0,0,0,0.3) ;
+}
+
+
+/*CSS for all inputs*/
+.inputClass{    
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    padding: 10px -11px 10px 20px;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 1px / 11px;
+    border-radius: 1px / 11px !important;
+    font: normal 16px/normal "ubuntu", Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(252,252,252,1);
+    -webkit-box-shadow: 1px 2px 7px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 1px 2px 7px 0 rgba(0,0,0,0.2) ;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -webkit-transform: rotateX(-2.291831180523293deg) rotateY(-5.729577951308233deg)   ;
+    transform: rotateX(-2.291831180523293deg) rotateY(-5.729577951308233deg)   ;
+}
+
+/*CSS for the index inputs on the arrays*/
+.indexText{
+    margin-top: 5px;
+    width: 20px;
+    height: 25px !important;
+}
+
+
+/*CSS for the names of variables and arrays*/
+.nameText{
+    margin-top: 5px;
+    width: 90px;
+    height: 25px !important;
+}
+
+/*CSS for the value of the variables*/
+.valueText{
+    margin-top: 5px;
+    width: 50px;
+    height: 25px !important;
+}
+
+/*CSS for the button that adds/remove indices from arrays*/
+.indexButton{
+    width: 15px;
+    height: 15px;
+}
+
+/* CSS for the VMR sequence input text */
+.vmrText{
+    width: 25px;
+    margin-left: 10px;
+}
+
+
+/*CSS for the buttons in arrays and variables*/
+.someButtons{
+    width: 90px;
+}
+
+.editButton{
+
+}
+
+.saveButton{
+
+}
+
+.deleteButton{
+
+}
+
+/*-------*/
